@@ -23,7 +23,7 @@ class PostViewController(
 
     @ResponseBody
     @RequestMapping(path = ["/post/{id}"], method = [RequestMethod.GET])
-    fun single(@PathVariable id: Long): String {
-        return "Здесь будет страница поста №${id}"
+    fun single(@PathVariable("id") id: Long): String {
+        return "Здесь будет страница поста №$id"
     }
 }
